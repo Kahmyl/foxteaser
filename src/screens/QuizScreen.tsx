@@ -43,9 +43,11 @@ const Quiz = ({ route, navigation }: StackNavigationType) => {
     );
     if (existingIndex >= 0) {
       const selectedOption = getResult.map((item: any) => {
-        const option = (item.id = id ? item.selectedOption : "");
-        return option;
+        if (item.quizId === id) {
+          return selectedOption;
+        }
       });
+      console.log(selectedOption);
       return selectedOption;
     }
     return "";

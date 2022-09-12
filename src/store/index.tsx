@@ -6,7 +6,7 @@ import logger from "redux-logger";
 const store = configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(ReduxThunk, logger),
+      getDefaultMiddleware().concat(ReduxThunk),
   });
 
   export type RootState = ReturnType<typeof store.getState>;
